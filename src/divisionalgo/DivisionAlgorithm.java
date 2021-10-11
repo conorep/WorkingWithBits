@@ -22,9 +22,31 @@ public class DivisionAlgorithm {
 
         // return the binary string
 
+//        StringBuilder binaryString = new StringBuilder();
+//
+//        while (decimal > 0)
+//        {
+//            binaryString.insert(0, (decimal % 2));
+//            decimal /= 2;
+//        }
+//
+//
+//        return binaryString.toString();
 
-        return "";
+        String binStr = "";
+
+        while (decimal > 0)
+        {
+            binStr = decimal%2 + binStr;
+            decimal /=2;
+        }
+
+        while (binStr.length() < 32)
+        {
+            binStr = 0 + binStr;
+        }
+
+        return binStr;
     }
-
 
 }
