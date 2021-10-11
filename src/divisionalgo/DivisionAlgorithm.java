@@ -8,6 +8,8 @@ public class DivisionAlgorithm {
      * @return binary representation of the number as a String
      */
     public static String decimalToBinary(int decimal){
+
+        final int BINARY_LENGTH = 32;
         // initialize an empty String to return
 
         // while the decimal is > 0 {
@@ -41,7 +43,7 @@ public class DivisionAlgorithm {
             decimal /=2;
         }
 
-        while (binStr.length() < 32)
+        while (binStr.length() < BINARY_LENGTH)
         {
             binStr = 0 + binStr;
         }
