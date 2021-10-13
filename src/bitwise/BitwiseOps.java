@@ -10,12 +10,12 @@ public class BitwiseOps {
     public static void main(String[] args) {
 
         bitwiseOR();
-        bitwiseXOR();
-        bitwiseAND();
-        bitwiseInvert();
-        shiftLeft();
-        shiftRightSigned();
-        shiftRightUnSigned();
+//        bitwiseXOR();
+//        bitwiseAND();
+//        bitwiseInvert();
+//        shiftLeft();
+//        shiftRightSigned();
+//        shiftRightUnSigned();
 
     }
 
@@ -29,8 +29,16 @@ public class BitwiseOps {
         byte one = 1;   // 0000_0001
 
         // is the number even?
+        if ((byte)(even & one) == 0)
+            System.out.println("even and one Number is even.");
+
+        if ((byte)(odd & one) == 0)
+            System.out.println("odd and one Number is even.");
 
         // make the odd number even by using the bitwise AND
+        System.out.println(Integer.toBinaryString(odd));
+        byte result = (byte)(odd & 0b1111_1110);
+        System.out.println(Integer.toBinaryString(result));
     }
 
     /**
@@ -41,6 +49,8 @@ public class BitwiseOps {
         byte one = 1;   // 0000_0001
 
         // make the even number odd by using the bitwise OR
+        byte result = (byte)(even | 0b0000_0001);
+        System.out.println(Integer.toBinaryString(result));
 
     }
 

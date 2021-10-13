@@ -26,9 +26,9 @@ public class BitMapImage {
 
     // The pic array represents 6 rows of 8 colored squares
     private static short[] pic = {
-            (short) 0b1010101010101010,
-            (short) 0b1010010110010110,
-            (short) 0b1001110001011010,
+            (short) 0xAAAA,
+            (short) 0xA596,
+            (short) 0x9C5A,
             (short) 0b1001000001011010,
             (short) 0b1010010110010110,
             (short) 0b1010101010101010,
@@ -77,7 +77,7 @@ public class BitMapImage {
             x += SIZE;
 
             // shift all bits right 2 spaces to process next 2 bit color(Orange,Blue,Black,White) to be drawn
-            colors = (short) (colors >>> 2);
+            colors = (short) (colors >> 2);
         }
 
 

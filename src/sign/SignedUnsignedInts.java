@@ -9,7 +9,7 @@ public class SignedUnsignedInts {
 
     public static void main(String[] args) {
         assignSignedInts();
-        assignUnsignedInts();
+        //assignUnsignedInts();
     }
 
     /**
@@ -27,6 +27,7 @@ public class SignedUnsignedInts {
 
         System.out.println("Character # of bits: " + Character.SIZE);
         System.out.println((int)Character.MIN_VALUE);
+        System.out.println((int)Character.MAX_VALUE);
     }
 
     /**
