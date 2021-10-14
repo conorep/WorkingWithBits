@@ -62,7 +62,7 @@ public class BitMapImage {
         final int NUM_SQUARES=8;
 
         // initialize the x coordinate of the upper left hand corner of the square
-        int x = 0;
+        int x = 350;
 
 
         for (int i = 1; i <= NUM_SQUARES; i++) {
@@ -74,7 +74,7 @@ public class BitMapImage {
             drawSquare(col, x, y);
 
             // change x to position for next square to draw, (y stays the same)
-            x += SIZE;
+            x -= SIZE;
 
             // shift all bits right 2 spaces to process next 2 bit color(Orange,Blue,Black,White) to be drawn
             colors = (short) (colors >> 2);
